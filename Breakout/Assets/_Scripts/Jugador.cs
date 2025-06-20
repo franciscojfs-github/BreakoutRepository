@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Jugador : MonoBehaviour
 {
+    public Opciones opciones;
     [SerializeField] public int limiteX = 24;
-    [SerializeField] public float velocidadPaddle = 30f;
+    [SerializeField] public float velocidadPaddle;
     
+
     Transform transform;
     Vector3 mousePos2D;
     Vector3 mousePos3D;
@@ -14,11 +16,25 @@ public class Jugador : MonoBehaviour
     void Start()
     {
         transform = this.gameObject.transform;
+        opciones.Cargar();
+        velocidadPaddle = opciones.velocidadJugador;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bola")
+        {
+            Vector3 direccion = collision.contacts[0].point - transform.position;
+            direccion = direccion.normalized;
+            collision.rigidbody.velocity = collision.gameObject.GetComponent<Bola>().velocidadBola * direccion;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        velocidadPaddle = opciones.velocidadJugador;
+
         mousePos2D = Input.mousePosition;
         mousePos2D.z = -Camera.main.transform.position.z;
         mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);

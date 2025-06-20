@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Bloque_Madera : Bloque
 {
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         resistencia = 3;
-        
     }
 
-    public override void RebotarBola()      //hacer uso de lo que tiene la clase padre como clase virtual. 
+    void Start()
     {
-        base.RebotarBola();                 //agarrar lo que ya hace nuestra clase padre y replicar lo que dice su metodo. Al replicar lo que dice su metodo podemos agregar logica antes o despues de ese metodo.
+        vidaBloque = resistencia * opciones.multDificultad;
+        bloquesRestantes++;
+    }
+
+
+    public override void RebotarBola(Collision collision)      //hacer uso de lo que tiene la clase padre como clase virtual. 
+    {
+        base.RebotarBola(collision);                 //agarrar lo que ya hace nuestra clase padre y replicar lo que dice su metodo. Al replicar lo que dice su metodo podemos agregar logica antes o despues de ese metodo.
     }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4815503191692971329}
   - component: {fileID: 6647539769030373311}
   - component: {fileID: 8260102666651603672}
+  - component: {fileID: 9017815880475784938}
   m_Layer: 0
   m_Name: Bola
   m_TagString: Bola
@@ -146,4 +147,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e57bfadae4e41247ac63e1ede3adc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadBola: 10
+  velocidadBola: 20
+  BolaDestruida:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AdministradorVidas, Assembly-CSharp
+        m_MethodName: EiminarVida
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  opciones: {fileID: 11400000, guid: 3b380604465ceba4780512c0a06b7ab7, type: 2}
+  bloque: {fileID: 2288695164126770045, guid: 791f2bdeb31ab1c4f8fbbf2bab676357, type: 3}
+--- !u!114 &9017815880475784938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5861341437339151683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070da6ef5e38fea43a0557d355926ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radio: 1
+  mantenerEnPantalla: 0
+  estaEnPantalla: 0
+  anchoCamara: 0
+  altoCamara: 0
+  salioDerecha: 0
+  salioIzquierda: 0
+  salioArriba: 0
+  salioAbajo: 0

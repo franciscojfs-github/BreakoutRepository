@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Bloque_Bomba : Bloque
 {
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         resistencia = 2;
     }
 
-    public override void RebotarBola()
+    void Start()
     {
-        base.RebotarBola();
+        vidaBloque = resistencia * opciones.multDificultad;
+        bloquesRestantes++;
+    }
+
+    public override void RebotarBola(Collision collision)
+    {
+        base.RebotarBola(collision);
     }
 
 }

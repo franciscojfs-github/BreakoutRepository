@@ -148,5 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e9c0a382580c644e91e38dca967624b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  opciones: {fileID: 11400000, guid: 3b380604465ceba4780512c0a06b7ab7, type: 2}
   limiteX: 24
   velocidadPaddle: 5

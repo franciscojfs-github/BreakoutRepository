@@ -19,7 +19,7 @@ public class Puntaje : MonoBehaviour
         textoPuntajeAlto = transformPuntajeAlto.GetComponent<TMP_Text>();
         textoPuntajeActual = transformPuntajeActual.GetComponent<TMP_Text>();
 
-        puntajeAltoSO.Cargar(); //El monobehavior puede hacer uso de Cargar porque PuntajeAlto hereda de PuntajePersistente
+        puntajeAltoSO.Cargar(); //El monobehavior puede hacer uso de Cargar porque PuntajeAlto hereda de ObjetoPersistente
         //if (PlayerPrefs.HasKey("PuntajeAlto"))        // ahora en vez de usar PlayerPrefs. usamos ScriptableObject (del script PuntajeAlto.cs)
         //{
             //puntajeAlto = PlayerPrefs.GetInt("PuntajeAlto");
@@ -30,7 +30,7 @@ public class Puntaje : MonoBehaviour
 
     private void FixedUpdate()
     {
-        puntajeAltoSO.puntajeActual += 50;
+
     }
 
     // Update is called once per frame
@@ -44,5 +44,10 @@ public class Puntaje : MonoBehaviour
             puntajeAltoSO.Guardar();
             //PlayerPrefs.SetInt("PuntajeAlto", puntajeActual);
         }
+    }
+
+    public void AumentarPuntaje(int puntos)
+    {
+        puntajeAltoSO.puntajeActual += puntos;
     }
 }
