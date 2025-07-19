@@ -39,7 +39,7 @@ public class Bloque : MonoBehaviour
     {
         vidaBloque = resistencia * opciones.multDificultad;
         bloquesRestantes = GameObject.FindGameObjectsWithTag("Bloque").Length;
-        //Debug.Log($"los bloques restantes son: {bloquesRestantes}");
+        Debug.Log($"los bloques restantes son: {bloquesRestantes}");
     }
 
     // Update is called once per frame
@@ -74,12 +74,12 @@ public class Bloque : MonoBehaviour
 
             if (menuFinNivel != null)
             {
-                Debug.Log("Todos los bloques destruidos. Cargando siguiente nivel...");
-                menuFinNivel.SiguienteNivel();
+                Debug.Log("Todos los bloques destruidos. Mostrando menú...");
+                menuFinNivel.MostrarMenu();  // ? Show menu here, NOT next level
             }
             else
             {
-                Debug.LogWarning("menuFinNivel es null. No se puede cargar siguiente nivel.");
+                Debug.LogWarning("menuFinNivel es null. No se puede mostrar el menú.");
             }
         }
     }
