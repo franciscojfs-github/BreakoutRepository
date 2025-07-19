@@ -3175,7 +3175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjetosAGuardar:
-  - {fileID: 11400000, guid: e99112da5fcb203458cefe049fe8e995, type: 2}
+  - {fileID: 11400000, guid: 4a005f0da225f4d4288bff0a2d79ecf6, type: 2}
 --- !u!4 &564598800
 Transform:
   m_ObjectHideFlags: 0
@@ -7845,7 +7845,7 @@ MonoBehaviour:
   transformPuntajeActual: {fileID: 0}
   textoPuntajeAlto: {fileID: 0}
   textoPuntajeActual: {fileID: 0}
-  puntajeAltoSO: {fileID: 11400000, guid: e99112da5fcb203458cefe049fe8e995, type: 2}
+  puntajeAltoSO: {fileID: 11400000, guid: 4a005f0da225f4d4288bff0a2d79ecf6, type: 2}
 --- !u!114 &1432277893
 MonoBehaviour:
   m_ObjectHideFlags: 0
